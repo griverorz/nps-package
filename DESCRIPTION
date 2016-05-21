@@ -1,0 +1,19 @@
+Package: nps
+Title: Utilities for Net Promote Score calculation
+Version: 1.0.0
+Authors@R: person("Gonzalo", "Rivero", email = "gonzalorivero@westat.com",
+                  role = c("aut", "cre"))
+Author: Gonzalo Rivero [aut, cre],
+Maintainer: Gonzalo Rivero <gonzalorivero@westat.com>
+Description: An example package with tools to calculate NPS intended for the Advanced R class at Westat.
+Depends:
+    R (>= 3.1.0)
+License: GPL-3
+LazyData: true
+Imports:
+    RcppArmadillo,
+    Rcpp
+Suggests:
+    testthat,
+    doParallel
+RoxygenNote: 5.0.1
