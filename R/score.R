@@ -8,6 +8,7 @@
 #' @param ... Additional arguments (currently not used)
 #' @return A vector with the estimated score and the standard error
 #' @rdname score
+#' @importFrom stats sd
 #' @export
 #' @examples
 #'
