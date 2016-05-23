@@ -1,6 +1,5 @@
 # NPS package
 
-`nps` is a very simple package used in the "Advanced R" workshop. It is designed
-to show some of the main features of package development in R. 
+`nps` is a package not intended to be used in a production environment. It was designed as a tool for the "R Development" class and it explores a number of features like S4 classes, C/C++ integration, or unit testing in addition to some programming tools.
 
 
