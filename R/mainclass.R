@@ -1,13 +1,6 @@
-#' An S4 class to work with NPS
+#' Check validity of an \code{nps} object
 #'
-#' @slot values A numeric vector
-#' @slot top A numeric vector
-#' @slot bottom A numeric vector
-setClass("nps",
-         slots = list(values="numeric", top="numeric", bottom="numeric"),
-         validity=check_nps)
-
-
+#' @param object A \code{nps} instance
 check_nps <- function(object) {
     errors <- character()
     if (is.null(object)) {
@@ -28,11 +21,20 @@ check_nps <- function(object) {
     if (length(errors) == 0) TRUE else errors
 }
 
-#' Instantiate
+#' An S4 class to work with NPS data
 #'
-#' @param x A numeric vector
-#' @param top A numeric vector
-#' @param bottom A numeric vector
+#' @slot values A numeric vector with the answer values
+#' @slot top A numeric vector with the values in the "Promoters" category
+#' @slot bottom A numeric vector with the values in the "Detractors" category
+setClass("nps",
+         slots = list(values="numeric", top="numeric", bottom="numeric"),
+         validity=check_nps)
+
+#' Instantiate an \code{nps} object
+#'
+#' @param x A numeric vector with the answer values
+#' @param top A numeric vector with the values in the "Promoters" category
+#' @param bottom A numeric vector with the values in the "Detractors" category
 #' @export
 #' @examples
 #' nps(sample(0:10, size=100, replace=TRUE))

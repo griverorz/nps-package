@@ -1,11 +1,9 @@
-#' foo: A package for computating the notorious bar statistic.
+#' nps: A package for handling NPS data
 #'
-#' The foo package provides three categories of important functions:
-#' foo, bar and baz.
+#' This is a package is not intended to be used in a production environment. It was designed as a tool for the "R Development" class and it explores a number of features like S4 classes, C/C++ integration, or unit testing in addition to some programming tools.
 #' 
-#' @section Foo functions:
-#' The foo functions ...
 #'
-#' @docType package
-#' @name foo
+#' @docType nps
+#' @import methods
+#' @name nps
 NULL

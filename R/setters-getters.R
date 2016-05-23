@@ -1,8 +1,21 @@
-#' Replace top values of an NPS vector
+#' Setters 
 #'
+#' @param object An \code{nps} object
+#' @param value A vector with the values of the top or bottom category
+#' @name setters
+NULL
+
+#' Getters
+#'
+#' @param object An \code{nps} object
+#' @name getters
+NULL
+
+
+#' Change the values corresponding to the "Promoters" category
+#'
+#' @rdname setters
 #' @export
-#' @docType methods
-#' @rdname nps-methods
 setGeneric("top<-", function(object, value) standardGeneric("top<-"))
 setReplaceMethod("top", signature="nps", function(object, value) {
                      object@top <- value
@@ -11,11 +24,11 @@ setReplaceMethod("top", signature="nps", function(object, value) {
                      }
                  })
 
-#' Replace bottom values of an NPS vector
+
+#' Change the values corresponding to the "Detractors" category
 #'
+#' @rdname setters
 #' @export
-#' @docType methods
-#' @rdname nps-methods
 setGeneric("bottom<-", function(object, value) standardGeneric("bottom<-"))
 setReplaceMethod("bottom", signature="nps", function(object, value) {
                      object@bottom <- value
@@ -24,28 +37,25 @@ setReplaceMethod("bottom", signature="nps", function(object, value) {
                      }
                  })
 
-#' Get top values of an NPS vector
+#' Retrieve the values corresponding to the "Promoters" category
 #'
+#' @rdname getters
 #' @export
-#' @docType methods
-#' @rdname nps-methods
 setGeneric("top", function(object) standardGeneric("top"))
 setMethod("top", signature="nps", function(object) object@top)
 
-#' Get bottom values of an NPS vector
+#' Retrieve the values corresponding to the "Promoters" category
 #'
+#' @rdname getters
 #' @export
-#' @docType methods
-#' @rdname nps-methods
 setGeneric("bottom", function(object) standardGeneric("bottom"))
 setMethod("bottom", signature="nps", function(object) object@bottom)
 
 
 #' Subset an NPS vector
 #'
-#' @export
-#' @docType methods
-#' @rdname nps-methods
-setMethod("[", signature="nps", function(x, i, j="missing", drop="missing") {
+#' @param x An \code{nps} object
+#' @param i An index for the selection
+setMethod("[", signature="nps", function(x, i) {
               new("nps", values=x@values[i], top=x@top, bottom=x@bottom)
           })
