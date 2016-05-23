@@ -13,13 +13,12 @@ bottom(object) <- value
 \arguments{
 \item{object}{An \code{nps} object}
 
-\item{value}{A vector with the values of the top or bottom category}
+\item{value}{The new categories}
+}
+\value{
+An \code{nps} object
 }
 \description{
-Setters
-
-Change the values corresponding to the "Promoters" category
-
-Change the values corresponding to the "Detractors" category
+Setter for the top and bottom categories
 }
 

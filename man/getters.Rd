@@ -13,11 +13,10 @@ bottom(object)
 \arguments{
 \item{object}{An \code{nps} object}
 }
+\value{
+An \code{nps} object
+}
 \description{
-Getters
-
-Retrieve the values corresponding to the "Promoters" category
-
-Retrieve the values corresponding to the "Promoters" category
+Getter for the top and bottom categories
 }
 

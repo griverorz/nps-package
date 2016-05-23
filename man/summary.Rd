@@ -5,12 +5,10 @@
 \alias{summary,nps-method}
 \title{Summary of NPS values}
 \usage{
-\S4method{summary}{nps}(object, ...)
+\S4method{summary}{nps}(object)
 }
 \arguments{
 \item{object}{An object of class \code{nps}}
-
-\item{...}{Additional arguments to be passed}
 }
 \value{
 A frequency table with counts for each category
