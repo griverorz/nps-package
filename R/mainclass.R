@@ -23,7 +23,7 @@ check_nps <- function(object) {
 
 #' An S4 class to work with NPS data
 #'
-#' @slot values A numeric vector with the answer values
+#' @slot values A numeric vector with the answer values to the NPS question
 #' @slot top A numeric vector with the values in the "Promoters" category
 #' @slot bottom A numeric vector with the values in the "Detractors" category
 setClass("nps",
