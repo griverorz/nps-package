@@ -8,7 +8,6 @@
 #' @param ... Additional arguments (currently not used)
 #' @return A vector with the estimated score and the standard error
 #' @rdname score
-#' @importFrom stats sd
 #' @export
 #' @examples
 #'
@@ -25,7 +24,7 @@ setMethod("score",
                   value <- (1-score)^2*tab[1] + (0-score)^2*tab[2] + (-1-score)^2*tab[3]
                   se <- sqrt(value)
               } else {
-                  se <- sd(npsboot(R, object@values, object@top, object@bottom))
+                  se <- stats::sd(npsboot(R, object@values, object@top, object@bottom))
               }
               
               ans <- cbind(score, se, if (boot) R)
