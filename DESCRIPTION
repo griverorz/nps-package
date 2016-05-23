@@ -11,9 +11,11 @@ Depends:
 License: GPL-3
 LazyData: true
 Imports:
-    RcppArmadillo,
-    Rcpp
+    methods
 Suggests:
     testthat,
     doParallel
+LinkingTo:
+    Rcpp,
+    RcppArmadillo
 RoxygenNote: 5.0.1

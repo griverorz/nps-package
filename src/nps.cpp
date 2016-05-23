@@ -1,16 +1,17 @@
+#include <RcppArmadillo.h>
 #include <vector>
 #include <RcppArmadilloExtensions/sample.h>
 
-using namespace Rcpp;
-using namespace std;
-
 // [[Rcpp::depends(RcppArmadillo)]]
+using namespace Rcpp;
 
-float cppnps(const vector<int> &x, vector<int> top, vector<int> bottom) {
+float cppnps(const std::vector<int> &x,
+	     std::vector<int> top,
+	     std::vector<int> bottom) {
 
   int size_x = x.size();
-  vector<int> counts(3);
-  vector<float> props(3);
+  std::vector<int> counts(3);
+  std::vector<float> props(3);
   
   for (int i=0; i < size_x; i++) {
     
@@ -32,11 +33,14 @@ float cppnps(const vector<int> &x, vector<int> top, vector<int> bottom) {
 }
 
 // [[Rcpp::export]]
-vector<float> npsboot(int R, const vector<int> &x, vector<int> top, vector<int> bottom) {
+std::vector<float> npsboot(int R,
+			   const std::vector<int> &x,
+			   std::vector<int> top,
+			   std::vector<int> bottom) {
   
-  vector<float> bootsample(R);
+  std::vector<float> bootsample(R);
   int size_x = x.size();
-  vector<int> candidate(size_x);
+  std::vector<int> candidate(size_x);
   
   for (int i=0; i<R; i++) {
     candidate = RcppArmadillo::sample(x, 
