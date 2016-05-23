@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/griverorz/nps-package.svg?branch=master)](https://travis-ci.org/griverorz/nps-package)
+[![codecov](https://codecov.io/gh/griverorz/nps-package/branch/master/graph/badge.svg)](https://codecov.io/gh/griverorz/nps-package)
 
 # NPS package
 
