@@ -5,7 +5,7 @@
 
 The `nps` is a package designed to be used as an example for the "R Development"
 class at Westat. It presents a number of features that are common in statistical
-programming like S4 classes, C/C++ integration, or unit testing. It is not
+programming in R like S4 classes, C/C++ integration, or unit testing. It is not
 intended for production use.
 
 # Net Promoter Score
