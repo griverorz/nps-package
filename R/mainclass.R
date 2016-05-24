@@ -3,15 +3,6 @@
 #' @param object A \code{nps} instance
 check_nps <- function(object) {
     errors <- character()
-    if (is.null(object)) {
-        msg <- paste("Cannot be null")
-        errors <- c(errors, msg)
-    }
-    if (any(is.na(object@top)) | any(is.na(object@bottom))) {
-        msg <- paste("Missing values not allowed in definitions")
-        errors <- c(errors, msg)
-    }
-    
     valobj <- object@values[!is.na(object@values)]
     if (any(valobj > max(object@top) | any(valobj < min(object@bottom)))) {
         msg <- paste("Values outside the range")
