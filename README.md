@@ -3,12 +3,28 @@
 
 # The `nps` package
 
-`nps` is a package not intended to be used in a production environment. It was
-designed as a tool for the "R Development" class and it explores a number of
-features like S4 classes, C/C++ integration, or unit testing in addition to some
-programming tools.
+The `nps` is a package designed to be used as an example for the "R Development"
+class at Westat. It presents a number of features that are common in statistical
+programming like S4 classes, C/C++ integration, or unit testing. It is not
+intended for production use.
 
 # Net Promoter Score
+
+The [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) (registered trademark of Fred Reichheld, Bain & Company,
+and Satmetrix) is a widely used measure of customer satisfaction.
+
+The Net Promoter Score is calculated based on responses to a single question:
+> How likely is it that you would recommend our company/product/service to a
+friend or colleague? 
+
+Respondents can answer in a scale from 0 (Very unlikely) to 10 (Very likely).
+Respondents who answered with 9 or 10 are called "Promoters" and respondents who
+answered with a value below 6 are called "Detractors". Values 7 and 8 are
+labeled "Passives". The NPS is defined as the proportion of Promoters minus the
+proportion of Detractors.
+
+Although it has gained considerable popularity, it has also attracted
+controversy. 
 
 # Usage
 
