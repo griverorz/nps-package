@@ -17,6 +17,11 @@ check_nps <- function(object) {
         msg <- paste("Values outside the range")
         errors <- c(errors, msg)
     }
+    
+    if (length(intersect(object@top, object@bottom)) > 0) {
+        msg <- paste("Top and bottom must not overlap")
+        errors <- c(errors, msg)
+    }
 
     if (length(errors) == 0) TRUE else errors
 }
